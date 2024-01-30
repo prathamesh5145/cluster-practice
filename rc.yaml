@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+ name: prathamesh-rc
+ lables:
+ - app: parthamesh-app
+spec:
+ template:
+  metadata:
+    labels:
+      app: prathamesh-app
+    spec:
+      containers:
+        - name: devops
+          image: httpd
+          ports: 
+            - containerPort: 80
+selector:
+  app: prathamesh-app
+replicas: 4
+...
+
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: prathamesh-svc
+spec:
+  ports:
+    - name: prathamesh
+      protocal: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: prathamesh-app
+  type: NodePort  
