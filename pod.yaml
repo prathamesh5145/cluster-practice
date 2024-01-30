@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   name: prathamesh
   labels:
-    app: prathamesh-app
+    app: pc
 spec: 
   containers:
   - name: devops
@@ -20,7 +20,7 @@ metadata:
   name: prathamesh-service
 spec:
   selector:
-    app: prathamesh-app
+    app: pc
   ports:
     - protocol: TCP
       port: 80
