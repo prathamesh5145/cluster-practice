@@ -16,8 +16,6 @@ spec:
          image: httpd
          ports: 
           - containerPort: 80
-  selector:
-    app: prathamesh-app
   replicas: 4
 ...
 
