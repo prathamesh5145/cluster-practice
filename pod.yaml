@@ -8,9 +8,9 @@ metadata:
 spec: 
   containers:
   - name: devops
-    image: httpd
+    image: tomcat
     ports: 
-    - containerPort: 80
+    - containerPort: 8080
 ...
 
 ---
@@ -23,7 +23,7 @@ spec:
     app: prathamesh-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 82
+      targetPort: 8080
   type: NodePort
 ...
