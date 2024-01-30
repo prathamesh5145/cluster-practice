@@ -23,7 +23,7 @@ spec:
     app: prathamesh-app
   ports:
     - protocol: TCP
-      port: 81
+      port: 80
       targetPort: 80
   type: NodePort
 ...
