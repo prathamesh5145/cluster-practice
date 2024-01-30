@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
- name: prathamesh-rc
+ name: rc
  labels:
-    app: parthamesh-app
+    app: pc
 spec:
   template:
     metadata:
       labels:
-        app: prathamesh-app
+        app: pc
     spec:
       containers:
        - name: devops
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: prathamesh-svc
+  name: rc-svc
 spec:
   ports:
       - name: prathamesh
@@ -31,5 +31,5 @@ spec:
         port: 80
         targetPort: 80
   selector:
-    app: prathamesh-app
+    app: pc
   type: NodePort  
