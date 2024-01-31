@@ -21,7 +21,7 @@ spec:
     matchLabels:
       app: prathamesh-deploy
   replicas: 3
-  statergy:
+  strategy:
     type: RollingUpdate
 ...
 
