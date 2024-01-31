@@ -17,7 +17,7 @@ spec:
           image: mysql
           env: 
             - name: MYSQL_ROOT_PASSWORD
-              value: prathamesh
+              value: "prathamesh"
           ports:
             - continerPort: 3306
   replicas: 4
