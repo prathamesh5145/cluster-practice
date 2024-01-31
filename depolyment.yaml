@@ -20,9 +20,9 @@ spec:
   selector:  
     matchLabels:
       app: prathamesh-deploy
-replica: 3
-statergy:
-  type: RollingUpdate
+  replicas: 3
+  statergy:
+    type: RollingUpdate
 ...
 
 ---
