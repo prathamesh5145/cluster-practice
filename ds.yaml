@@ -1,15 +1,15 @@
 ---
 apiVersion: apps/v1
 kind: DaemonSet
-metadata: 
+metadata:
   name: prathamesh-ds
-  labels: 
+  labels:
     app: ds
 spec:
   template:
     metadata:
       name: ds-temp
-      labels: 
+      labels:
         app: ds
     spec:
       containers:
@@ -17,9 +17,9 @@ spec:
           image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
           ports:
             - containerPort: 24224
-    selector:
-      matchLabels:
-        app: ds
+      selector:
+        matchLabels:
+          app: ds
 ...
 
 ---
