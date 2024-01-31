@@ -37,4 +37,5 @@ spec:
       targetPort: 3306
   selctor: 
     app: sts
+  type: NodePort
 ...
