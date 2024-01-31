@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: DaemenSet
+metadata: 
+  name: prathamesh-ds
+  labels: 
+    app: ds
+spec:
+  template:
+    metadata:
+      name: ds-temp
+      labels: 
+        app: ds
+    spec:
+      containers:
+        - name: ds-containers
+          image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
+          ports:
+            - containerPort: 24224
+    selector:
+      matchLabels:
+        app: ds
+...
+
+---
+appVersion: v1
+kind: Service
+metadata:
+  name: ds-svc
+spec:
+  ports:
+    - name: ds-ports
+      port: 80
+      protocol: TCP
+      targetPort: 24224
+  selector: 
+    app: ds
+  type: NodePort
+...
