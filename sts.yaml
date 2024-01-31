@@ -15,11 +15,11 @@ spec:
       containers:
         - name: sts-container
           image: mysql
+          ports:
+            - continerPort: 3306
           env: 
             - name: MYSQL_ROOT_PASSWORD
               value: "prathamesh"
-          ports:
-            - continerPort: 3306
   replicas: 4
   selector: 
     matchLabels:
