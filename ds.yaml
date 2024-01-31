@@ -17,9 +17,9 @@ spec:
           image: quay.io/fluentd_elasticsearch/fluentd:v2.5.2
           ports:
             - containerPort: 24224
-      selector:
-        matchLabels:
-          app: ds
+  selector:
+    matchLabels:
+      app: ds
 ...
 
 ---
