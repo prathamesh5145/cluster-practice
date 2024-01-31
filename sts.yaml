@@ -16,7 +16,7 @@ spec:
         - name: sts-container
           image: mysql
           ports:
-            - continerPort: 3306
+            - containerPort: 3306
           env: 
             - name: MYSQL_ROOT_PASSWORD
               value: "prathamesh"
@@ -35,7 +35,7 @@ spec:
     - port: 80
       protocol: TCP
       targetPort: 3306
-  selctor: 
+  selector: 
     app: sts
   type: NodePort
 ...
