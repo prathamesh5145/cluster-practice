@@ -20,10 +20,10 @@ spec:
               value: prathamesh
           ports:
             - continerPort: 3306
+    replicas: 4
     selector: 
       matchLabels:
         app: sts
-    replicas: 4
 ...
 
 ---
