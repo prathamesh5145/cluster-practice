@@ -1,6 +1,6 @@
 ---
 apiVersion: apps/v1
-kind: DaemenSet
+kind: DaemonSet
 metadata: 
   name: prathamesh-ds
   labels: 
