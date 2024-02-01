@@ -12,9 +12,9 @@ spec:
     ports: 
     - containerPort: 80
   - name: devops2
-    image: tomcat
+    image: nginx
     ports:
-    - containerPort: 8080
+    - containerPort: 443
 ...
 
 ---
