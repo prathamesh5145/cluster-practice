@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: prathamesh
+  labels:
+    app: pc
+spec: 
+  containers:
+  - name: devops
+    image: httpd
+    ports: 
+    - containerPort: 80
+  - name: devops2
+    image: tomcat
+    ports:
+    - containerPort: 8080
+...
+
+---
+apiVersion: v1 
+kind: Service
+metadata: 
+  name: prathamesh-service
+spec:
+  selector:
+    app: pc
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
